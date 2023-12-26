@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="post.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/solid.min.css">
+    <title>Home</title>
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="box">
+            <div class="footer">
+                <a href="#"><i class="fas fa-home"></i><span>Home</span></a>
+                <a href="#"><i class="fas fa-search"></i><span>Search</span></a>
+                <a href="#" class="active"><i class="fas fa-circle-plus"></i><span>Post</span></a>
+                <!-- <a href="#"><i class="fa-solid fa-message"></i><span>Chat</span></a> -->
+                <a href="#"><i class="fas fa-user"></i> <span>Profile</span></a>
+            </div>
+            <form action="" method="post">
+                <div class="post-header">
+                    <span><a href=""><i class="fa-solid fa-x"></i></a></span>
+                    <p>Create a post</p>
+                    <button>Post</button>
+                </div>
+                <div class="post-body">
+                    <div class="write-post">
+                        <div class="profile-div">
+                            <div class="profile-img">
+                                <img src="map.jpg" alt="">
+                            </div>
+                            <div class="username">
+                                <h5>Username</h5>
+                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam excepturi facilis dolorum similique porro, praesentium maiores tenetur ex assumenda quia atque autem cumque reprehenderit aspernatur nihil accusamus modi enim distinctio!</span>
+                            </div>
+                        </div>
+                        <div class="write-post-head">
+                            <div class="wrapper">
+                                <input type="file" id="file-input" accept="image/*" title="Select image file">
+                                <label for="file-input">
+                                  <i class="fas fa-image" title="Select image file"></i>
+                                  <span></span>
+                                </label>
+                                <i class="fa fa-times remove" title="Remove image file"></i>
+                            </div>
+                            <div><i class="fa fa-pen"></i></div>
+                            <div class="clear" onclick="clearAll()"><i class="fa fa-trash-alt"></i></div>
+                            <div>
+                                <i class="fa fa-eye" onclick="showVisibility()"></i>
+                                <div class="post-visibility">
+                                    <span class="public" onclick="getValue(this)">Public</span>
+                                    <span class="friends" onclick="getValue(this)">Friends</span>
+                                </div>
+                            </div>
+                            <div id="visibility"></div>
+                        </div>
+                        <div class="text-and-img">
+                            <div class="selected-img" id="image-container">
+
+                            </div>
+                            <textarea name="" id="" cols="30" rows="10" placeholder="What do you want to talk about?"></textarea>
+                        </div>
+                    </div>
+                    <p class="r-p-h">Your recent post <i class="fa fa-pen"></i></p>
+                    <div class="old-post">
+                        <div id="imageDiv">
+                            <img src="map.jpg" alt="Image">
+                            <div class="caption">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos asperiores nisi nesciunt! Quaerat voluptates fuga inventore quos, corrupti modi placeat beatae harum adipisci cumque, repudiandae corporis alias laudantium ipsa id.
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo eligendi, cumque libero necessitatibus cupiditate optio officiis aliquid, quaerat amet consequuntur porro qui, inventore perspiciatis laboriosam iure repellendus non omnis iusto!
+                            </div>
+                            <p id="ellipseButton" onclick="toggleOptions(this)">...</p>
+                            <div id="options" style="display: none;">
+                              <!--options -->
+                              <p>Delete</p>
+                              
+                              
+                            </div>
+                        </div>
+                        <div id="imageDiv">
+                            <img src="https://www.rxwallpaper.site/wp-content/uploads/free-beach-sunset-wallpapers-desktop-long-wallpapers-4-800x800.jpg">
+                            <div class="caption">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos asperiores nisi nesciunt! Quaerat voluptates fuga inventore quos, corrupti modi placeat beatae harum adipisci cumque, repudiandae corporis alias laudantium ipsa id.
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo eligendi, cumque libero necessitatibus cupiditate optio officiis aliquid, quaerat amet consequuntur porro qui, inventore perspiciatis laboriosam iure repellendus non omnis iusto!
+                            </div>
+                            <p id="ellipseButton" onclick="toggleOptions(this)">...</p>
+                            <div id="options" style="display: none;">
+                              <!--options -->
+                              <p>Delete</p>
+                              
+                              
+                            </div>
+                        </div>
+                        <div id="imageDiv">
+                            <img src="https://i.pinimg.com/originals/00/0f/85/000f8537c14a1d9e350ebdd30951fc27.jpg">
+                            <div class="caption">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos asperiores nisi nesciunt! Quaerat voluptates fuga inventore quos, corrupti modi placeat beatae harum adipisci cumque, repudiandae corporis alias laudantium ipsa id.
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo eligendi, cumque libero necessitatibus cupiditate optio officiis aliquid, quaerat amet consequuntur porro qui, inventore perspiciatis laboriosam iure repellendus non omnis iusto!
+                            </div>
+                            <p id="ellipseButton" onclick="toggleOptions(this)">...</p>
+                            <div id="options" style="display: none;">
+                              <!--options -->
+                              <p>Delete</p>
+                              
+                              
+                            </div>
+                        </div>
+                        <div id="imageDiv">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgJ1UiOaq_MNStMdHpBEaHTs2YAKxTbQ0CIdDMj9Hsuegus6_p">
+                            <div class="caption">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos asperiores nisi nesciunt! Quaerat voluptates fuga inventore quos, corrupti modi placeat beatae harum adipisci cumque, repudiandae corporis alias laudantium ipsa id.
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo eligendi, cumque libero necessitatibus cupiditate optio officiis aliquid, quaerat amet consequuntur porro qui, inventore perspiciatis laboriosam iure repellendus non omnis iusto!
+                            </div>
+                            <p id="ellipseButton" onclick="toggleOptions(this)">...</p>
+                            <div id="options" style="display: none;">
+                              <!--options -->
+                              <p>Delete</p>
+                              
+                              
+                            </div>
+                        </div>
+                        <div id="imageDiv">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9NQ1BncFIDNjxnTFOWdaPyLdGG5-a77zKUEGzhvO0m327KB3Fhg">
+                            <div class="caption">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos asperiores nisi nesciunt! Quaerat voluptates fuga inventore quos, corrupti modi placeat beatae harum adipisci cumque, repudiandae corporis alias laudantium ipsa id.
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo eligendi, cumque libero necessitatibus cupiditate optio officiis aliquid, quaerat amet consequuntur porro qui, inventore perspiciatis laboriosam iure repellendus non omnis iusto!
+                            </div>
+                            <p id="ellipseButton" onclick="toggleOptions(this)">...</p>
+                            <div id="options" style="display: none;">
+                              <!--options -->
+                              <p>Delete</p>
+                              
+                              
+                            </div>
+                        </div>
+                        <div id="imageDiv">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDUlMmE0ysfjmTndj0cFVGXO7VxzCis7V3X_Bb0kgo9-zF7f4X">
+                            <div class="caption">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+                            <p id="ellipseButton" onclick="toggleOptions(this)">...</p>
+                            <div id="options" style="display: none;">
+                              <!--options -->
+                              <p>Delete</p>
+                              
+                              
+                            </div>
+                        </div>
+                        <div id="imageDiv">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTYO44pYWILn5kRJzESsWSKsvKivTbnL5FnSXYty1u06ZTcDSRBw">
+                            <div class="caption">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos asperiores nisi nesciunt! Quaerat voluptates fuga inventore quos, corrupti modi placeat beatae harum adipisci cumque, repudiandae corporis alias laudantium ipsa id.
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo eligendi, cumque libero necessitatibus cupiditate optio officiis aliquid, quaerat amet consequuntur porro qui, inventore perspiciatis laboriosam iure repellendus non omnis iusto!
+                            </div>
+                            <p id="ellipseButton" onclick="toggleOptions(this)">...</p>
+                            <div id="options" style="display: none;">
+                              <!--options -->
+                              <p>Delete</p>
+                              
+                              
+                            </div>
+                        </div>
+                        <div id="imageDiv">
+                            <img src="https://thumbs.dreamstime.com/b/empty-table-top-sunset-beach-blue-against-blurred-background-93335710.jpg">
+                            <div class="caption">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos asperiores nisi nesciunt! Quaerat voluptates fuga inventore quos, corrupti modi placeat beatae harum adipisci cumque, repudiandae corporis alias laudantium ipsa id.
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo eligendi, cumque libero necessitatibus cupiditate optio officiis aliquid, quaerat amet consequuntur porro qui, inventore perspiciatis laboriosam iure repellendus non omnis iusto!
+                            </div>
+                            <p id="ellipseButton" onclick="toggleOptions(this)">...</p>
+                            <div id="options" style="display: none;">
+                              <!--options -->
+                              <p>Delete</p>
+                              
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+<script>
+    // Get elements by ID or class name
+    var fileInput = document.getElementById('file-input');
+    var label = document.querySelector('label');
+    var labelText = label.querySelector('span');
+    var labelRemove = document.querySelector('i.remove');
+    var labelDefault = labelText.textContent;
+    var selectedImgDiv = document.querySelector('.selected-img');
+
+    selectedImgDiv.style.display = 'none';
+
+    fileInput.addEventListener('change', function(event) {
+    var file = fileInput.files[0]; // Access the selected file
+
+    if (file && file.type.startsWith('image/')) {
+        // var fileName = file.name; file name
+        // labelText.textContent = fileName;
+        labelText.textContent = 'Selected';
+        labelText.style.color = '#00c100';
+        labelRemove.style.display = 'inline'; // Show the remove text
+        selectedImgDiv.style.display = 'flex'; //display img
+
+        var imageContainer = document.getElementById('image-container');
+
+        var reader = new FileReader(); // Create a FileReader object
+
+        reader.onload = function(event) {
+        var img = document.createElement('img'); // Create an image element
+        img.src = event.target.result; // Set the image source to the loaded result (URL)
+        img.alt = "Selected Image"; // Optional: Set alt attribute for accessibility
+
+        // Clear previous content in the image container and append the new image
+        imageContainer.innerHTML = '';
+        imageContainer.appendChild(img);
+        };
+
+        reader.readAsDataURL(file); // Read the file as a data URL
+
+
+    } else {
+        labelText.textContent = "Invalid File";
+        labelText.style.color = 'red';
+        labelRemove.style.display = 'inline'; // Hide the remove text
+        fileInput.value = ''; // Clear the file input
+    }
+    });
+
+    labelRemove.addEventListener('click', function(event) {
+    labelText.textContent = labelDefault;
+    labelRemove.style.display = 'none'; // Hide the remove text
+    fileInput.value = ''; // Clear the file input
+    selectedImgDiv.style.display = 'none';
+    });
+
+    
+    function toggleOptions(button) {
+        var optionsDiv = button.nextElementSibling; // Get the associated options div
+        optionsDiv.style.display = (optionsDiv.style.display === 'none') ? 'block' : 'none'; 
+    }
+
+    function showVisibility() {
+        var eye = document.querySelector('.post-visibility');
+        eye.style.display = (eye.style.display === 'none') ? 'flex' : 'none';
+        eye.style.gap = '5px';
+        eye.style.position = 'absolute';
+    }
+
+    function getValue(clickedElement) {
+        var value_PF = clickedElement.textContent.trim();
+        // console.log("Clicked value:", value_PF);
+       document.getElementById('visibility').innerText = value_PF;  
+    }
+
+    function clearAll() {
+        document.querySelector('textarea').value = '';
+    }
+
+</script>
+
+</html>
