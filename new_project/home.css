@@ -101,13 +101,20 @@ html,body{
 }
 
 .post-main-div {
-    width: 100%;
+    width: 80%;
     height: 82%;
     /* border: 1px solid blue; */
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow-y: scroll;
+}
+
+.post-submit {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .post-div {
@@ -118,9 +125,8 @@ html,body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #ffffff;
-    box-shadow:  7px 7px 14px #ededed,
-             -7px -7px 14px #ffffff;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .user-info {
@@ -182,13 +188,32 @@ html,body{
     align-items: center;
     padding: 0 10px 0 85px;
     color: #616161;
-    font-size: 13px;
+    font-size: 16px;
     margin-bottom: 10px;
 }
 
 .post-likes .l-c-s{
     display: flex;
+    color: #005aff;
     gap: 20px;
+    cursor: pointer;
+}
+
+.l-c-s .gradient-icon i {
+    font-size: 20px;
+}
+
+.gradient-icon.heart:active {
+    animation: shake .3s ease-in-out;
+} 
+
+@keyframes shake {
+    0% { transform: translateY(5px); }
+    20% { transform: translateX(-5px); }
+    40% { transform: translateX(5px); }
+    60% { transform: translateY(-5px); }
+    80% { transform: translateY(5px); }
+    100% { transform: translateX(5); }
 }
 
 .posted-on {
@@ -255,8 +280,11 @@ html,body{
         padding-left: 30px;
         justify-content: start;
     }
+    .post-main-div {
+        width: 100%;
+    }
     .post-div {
-        width: 96%;
+        width: 94%;
     }
     .post-details {
         padding: 2px 20px 5px 20px;

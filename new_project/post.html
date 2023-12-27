@@ -133,7 +133,7 @@
                             </div>
                         </div>
                         <div id="imageDiv">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDUlMmE0ysfjmTndj0cFVGXO7VxzCis7V3X_Bb0kgo9-zF7f4X">
+                            <img src="https://www.rxwallpaper.site/wp-content/uploads/free-beach-sunset-wallpapers-desktop-long-wallpapers-4-800x800.jpg">
                             <div class="caption">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
                             <p id="ellipseButton" onclick="toggleOptions(this)">...</p>
                             <div id="options" style="display: none;">
@@ -190,37 +190,37 @@
     fileInput.addEventListener('change', function(event) {
     var file = fileInput.files[0]; // Access the selected file
 
-    if (file && file.type.startsWith('image/')) {
-        // var fileName = file.name; file name
-        // labelText.textContent = fileName;
-        labelText.textContent = 'Selected';
-        labelText.style.color = '#00c100';
-        labelRemove.style.display = 'inline'; // Show the remove text
-        selectedImgDiv.style.display = 'flex'; //display img
+        if (file && file.type.startsWith('image/')) {
+        
+            labelText.textContent = 'Selected';
+            labelText.style.color = '#00c100';
+            labelRemove.style.display = 'inline'; // Show the remove text
+            selectedImgDiv.style.display = 'flex'; //display img
 
-        var imageContainer = document.getElementById('image-container');
+            var imageContainer = document.getElementById('image-container');
 
-        var reader = new FileReader(); // Create a FileReader object
+            var reader = new FileReader(); // Create a FileReader object
 
-        reader.onload = function(event) {
-        var img = document.createElement('img'); // Create an image element
-        img.src = event.target.result; // Set the image source to the loaded result (URL)
-        img.alt = "Selected Image"; // Optional: Set alt attribute for accessibility
+            reader.onload = function(event) {
+                var img = document.createElement('img'); // Create an image element
+                img.src = event.target.result; // Set the image source to the loaded result (URL)
+                img.alt = "Selected Image"; // Optional: Set alt attribute for accessibility
 
-        // Clear previous content in the image container and append the new image
-        imageContainer.innerHTML = '';
-        imageContainer.appendChild(img);
-        };
+                // Clear previous content in the image container and append the new image
+                imageContainer.innerHTML = '';
+                imageContainer.appendChild(img);
+            };
 
-        reader.readAsDataURL(file); // Read the file as a data URL
+            reader.readAsDataURL(file); // Read the file as a data URL
 
 
-    } else {
-        labelText.textContent = "Invalid File";
-        labelText.style.color = 'red';
-        labelRemove.style.display = 'inline'; // Hide the remove text
-        fileInput.value = ''; // Clear the file input
-    }
+        } 
+        else {
+            labelText.textContent = "Invalid File";
+            labelText.style.color = 'red';
+            labelRemove.style.display = 'inline'; // Hide the remove text
+            fileInput.value = ''; // Clear the file input
+        }
     });
 
     labelRemove.addEventListener('click', function(event) {
@@ -229,6 +229,7 @@
     fileInput.value = ''; // Clear the file input
     selectedImgDiv.style.display = 'none';
     });
+
 
     
     function toggleOptions(button) {
@@ -251,6 +252,7 @@
 
     function clearAll() {
         document.querySelector('textarea').value = '';
+        document.getElementById('visibility').innerText = ''; 
     }
 
 </script>

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/solid.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Home</title>
 
 </head>
@@ -25,67 +26,88 @@
                 <p class="feed">Feed <i class="fas fa-feed"></i></p>
             </div>
             <div class="post-main-div">
-                <div class="post-div">
-                    <div class="user-info">
-                        <div class="user-image">
-                            <img src="map.jpg" alt="P">
+                <form action="" method="post" class="post-submit">
+                    <div class="post-div">
+                        <div class="user-info">
+                            <div class="user-image">
+                                <img src="map.jpg" alt="P">
+                            </div>
+                            <div class="user-name-date">
+                                <h5>Username</h5>
+                                <p>12-12-2023 <span>&nbsp; |&nbsp; 10:20 PM</span> </p>
+                            </div>
                         </div>
-                        <div class="user-name-date">
-                            <h5>Username</h5>
-                            <p>12-12-2023 <span>&nbsp; |&nbsp; 10:20 PM</span> </p>
+                        <div class="post-details">
+                            <div class="post-description">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic deserunt quos maiores facilis aliquam enim digni aut ipsa veniam? Neque ipsa quas aspernatur quae dolor, rerum sapiente aliquam aliquid perspiciatis?</p>
+                            </div>
+                            <div class="post-image">
+                                <img src="map.jpg" alt="Post">
+                            </div>
                         </div>
-                    </div>
-                    <div class="post-details">
-                        <div class="post-description">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        </div>
-                        <div class="post-image">
-                            <img src="https://i.pinimg.com/originals/00/0f/85/000f8537c14a1d9e350ebdd30951fc27.jpg">
-                        </div>
-                    </div>
-                    <div class="post-likes">
-                        <div class="l-c-s">
-                            <p><i class="far fa-heart"></i></p>
-                            <p><i class="far fa-comment"></i></p>
-                            <p><i class="fas fa-share"></i></p>
-                        </div>
-                        <div class="water-mark">
-                            <p class="posted-on">posted on <span class="wm-talk">talk</span><span  class="wm-ify">iFy</span></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="post-div">
-                    <div class="user-info">
-                        <div class="user-image">
-                            <img src="https://www.rxwallpaper.site/wp-content/uploads/free-beach-sunset-wallpapers-desktop-long-wallpapers-4-800x800.jpg">
-                        </div>
-                        <div class="user-name-date">
-                            <h5>Username</h5>
-                            <p>12-12-2023 <span>&nbsp; |&nbsp; 10:20 PM</span> </p>
+                        <div class="post-likes">
+                            <div class="l-c-s">
+                                <p class="gradient-icon heart"><i class="far fa-heart" onclick="toggleIconClass(this)"></i></p>
+                                <p class="gradient-icon"><i class="far fa-comment"></i></p>
+                                <p class="gradient-icon"><i class="fas fa-share"></i></p>
+                            </div>
+                            <div class="water-mark">
+                                <p class="posted-on">posted on <span class="wm-talk">talk</span><span  class="wm-ify">iFy</span></p>
+                            </div>
                         </div>
                     </div>
-                    <div class="post-details">
-                        <div class="post-description">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic deserunt quos maiores facilis aliquam enim digni aut ipsa veniam? Neque ipsa quas aspernatur quae dolor, rerum sapiente aliquam aliquid perspiciatis?</p>
+                    <div class="post-div">
+                        <div class="user-info">
+                            <div class="user-image">
+                                <img src="map.jpg" alt="P">
+                            </div>
+                            <div class="user-name-date">
+                                <h5>Username</h5>
+                                <p>12-12-2023 <span>10:20 PM</span> </p>
+                            </div>
                         </div>
-                        <div class="post-image">
-                            <img src="map.jpg" alt="Post">
+                        <div class="post-details">
+                            <div class="post-description">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic deserunt quos maiores facilis aliquam enim digni aut ipsa veniam? Neque ipsa quas aspernatur quae dolor, rerum sapiente aliquam aliquid perspiciatis?</p>
+                            </div>
+                            <div class="post-image">
+                                <img src="map.jpg" alt="Post">
+                            </div>
+                        </div>
+                        <div class="post-likes">
+                            <div class="l-c-s">
+                                <p class="gradient-icon heart"><i class="far fa-heart" onclick="toggleIconClass(this)"></i></p>
+                                <p class="gradient-icon"><i class="far fa-comment"></i></p>
+                                <p class="gradient-icon"><i class="fas fa-share"></i></p>
+                            </div>
+                            <div class="water-mark">
+                                <p class="posted-on">posted on <span class="wm-talk">talk</span><span  class="wm-ify">iFy</span></p>
+                            </div>
                         </div>
                     </div>
-                    <div class="post-likes">
-                        <div class="l-c-s">
-                            <p><i class="far fa-heart"></i></p>
-                            <p><i class="far fa-comment"></i></p>
-                            <p><i class="fas fa-share"></i></p>
-                        </div>
-                        <div class="water-mark">
-                            <p class="posted-on">posted on <span class="wm-talk">talk</span><span  class="wm-ify">iFy</span></p>
-                        </div>
-                    </div>
-                </div>
+                </form>
             </div>
+            
             
         </div>
     </div>
 </body>
+
+<script>
+
+function toggleIconClass(icon) {
+  if (icon.classList.contains('far')) {
+    icon.classList.remove('far');
+    icon.classList.add('fas');
+    icon.style.background = '-webkit-linear-gradient(45deg, #007eff, #0070ff)';
+    icon.style['-webkit-background-clip'] = 'text';
+    icon.style['-webkit-text-fill-color'] = 'transparent';
+  } else if (icon.classList.contains('fas')) {
+    icon.classList.remove('fas');
+    icon.classList.add('far');
+  }
+}
+
+</script>
+
 </html>
