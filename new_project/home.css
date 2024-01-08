@@ -42,9 +42,24 @@ html,body{
     height: 10%;
     padding: 0 11.5% ;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    align-items: center;
+    /* flex-direction: column; */
+    /* justify-content: flex-end; */
 }
+
+.main-head img {
+    height: 100%;
+    width: 70px;
+    /* border: 1px solid red; */
+    background: #fff;
+}
+
+.t { color: blue; }
+.a { color: red; }
+.l { color: green; }
+.k { color: orange; }
+.I-F-Y { color: purple; }
+
 
 .main-head p {
     color: #424242;
