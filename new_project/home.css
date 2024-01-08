@@ -49,9 +49,9 @@ html,body{
 
 .main-head img {
     height: 100%;
-    width: 70px;
     /* border: 1px solid red; */
     background: #fff;
+    transform: rotate(45deg);
 }
 
 .t { color: blue; }
@@ -60,6 +60,11 @@ html,body{
 .k { color: orange; }
 .I-F-Y { color: purple; }
 
+
+.main-head h3{
+    margin-left: -18px;
+    z-index: 1;
+}
 
 .main-head p {
     color: #424242;
@@ -292,7 +297,7 @@ html,body{
         box-shadow: none;
     }
     .main-head h3{
-        padding-left: 30px;
+        /* padding-left: 30px; */
         justify-content: start;
     }
     .post-main-div {
