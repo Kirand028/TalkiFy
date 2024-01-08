@@ -291,7 +291,9 @@ html,body{
 
 
 .footer .active > *{
-    color: #005aff;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to left, orange, blue );
 }
 
 @media screen and (max-width: 580px) {
