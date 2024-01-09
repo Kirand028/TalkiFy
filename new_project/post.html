@@ -23,7 +23,7 @@
             </div>
             <form action="" method="post">
                 <div class="post-header">
-                    <span><a href=""><i class="fa-solid fa-x"></i></a></span>
+                    <span><a href=""><i class="fa fa-times"></i></a></span>
                     <p>Create a post</p>
                     <button>Post</button>
                 </div>
@@ -31,42 +31,48 @@
                     <div class="write-post">
                         <div class="profile-div">
                             <div class="profile-img">
-                                <img src="map.jpg" alt="">
+                                <img src="Chena-Verony.jpg" alt="">
                             </div>
                             <div class="username">
-                                <h5>Username</h5>
-                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam excepturi facilis dolorum similique porro, praesentium maiores tenetur ex assumenda quia atque autem cumque reprehenderit aspernatur nihil accusamus modi enim distinctio!</span>
+                                <p>Roronoa Zoro</p>
+                                <span id="visibility" class="visibility">Public</span>
                             </div>
                         </div>
-                        <div class="write-post-head">
+                        <div class="post-title">
                             <div class="wrapper">
                                 <input type="file" id="file-input" accept="image/*" title="Select image file">
-                                <label for="file-input">
+                                <label for="file-input" class="label-ele">
                                   <i class="fas fa-image" title="Select image file"></i>
-                                  <span></span>
                                 </label>
-                                <i class="fa fa-times remove" title="Remove image file"></i>
                             </div>
-                            <div><i class="fa fa-pen"></i></div>
-                            <div class="clear" onclick="clearAll()"><i class="fa fa-trash-alt"></i></div>
-                            <div>
-                                <i class="fa fa-eye" onclick="showVisibility()"></i>
-                                <div class="post-visibility">
-                                    <span class="public" onclick="getValue(this)">Public</span>
-                                    <span class="friends" onclick="getValue(this)">Friends</span>
-                                </div>
+                            <div class="post-img">
+
                             </div>
-                            <div id="visibility"></div>
+                            <p class="image-title">Select an Image</p>
+                            <i class="fa fa-times remove" title="Remove image file"></i>
                         </div>
-                        <div class="text-and-img">
+                        <div class="write-post-head">
+                            <div class="icon-container">
+                                <span onclick="makeBold();"><i class="fa-solid fa-bold"></i></span>
+                                <span onclick="makeItalic();"><i class="fa-solid fa-italic"></i></span>
+                                <span onclick="clearText();"><i class="fa-solid fa-eraser"></i></span>
+                                <span style="background: transparent;"><i class="fa-solid fa-bars"></i></span>
+                                <span style="background: transparent;"><i class="fa fa-image"></i></span>
+                                <span style="background: transparent;"><i class="fa fa-video"></i></span>
+                            </div>
+                            <div class="textarea-container">
+                                <textarea name="" id="text-area" cols="30" rows="10" placeholder="What do you want to talk about?"></textarea>
+                            </div>
+                        </div>
+                        <!-- <div class="text-and-img">
                             <div class="selected-img" id="image-container">
 
                             </div>
                             <textarea name="" id="" cols="30" rows="10" placeholder="What do you want to talk about?"></textarea>
-                        </div>
+                        </div> -->
                     </div>
-                    <p class="r-p-h">Your recent post <i class="fa fa-pen"></i></p>
-                    <div class="old-post">
+                    <!-- <p class="r-p-h">Your recent post</p> -->
+                    <!-- <div class="old-post">
                         <div id="imageDiv">
                             <img src="map.jpg" alt="Image">
                             <div class="caption">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos asperiores nisi nesciunt! Quaerat voluptates fuga inventore quos, corrupti modi placeat beatae harum adipisci cumque, repudiandae corporis alias laudantium ipsa id.
@@ -74,7 +80,6 @@
                             </div>
                             <p id="ellipseButton" onclick="toggleOptions(this)">...</p>
                             <div id="options" style="display: none;">
-                              <!--options -->
                               <p>Delete</p>
                               
                               
@@ -87,7 +92,6 @@
                             </div>
                             <p id="ellipseButton" onclick="toggleOptions(this)">...</p>
                             <div id="options" style="display: none;">
-                              <!--options -->
                               <p>Delete</p>
                               
                               
@@ -100,7 +104,7 @@
                             </div>
                             <p id="ellipseButton" onclick="toggleOptions(this)">...</p>
                             <div id="options" style="display: none;">
-                              <!--options -->
+                              
                               <p>Delete</p>
                               
                               
@@ -113,7 +117,7 @@
                             </div>
                             <p id="ellipseButton" onclick="toggleOptions(this)">...</p>
                             <div id="options" style="display: none;">
-                              <!--options -->
+                              
                               <p>Delete</p>
                               
                               
@@ -126,7 +130,7 @@
                             </div>
                             <p id="ellipseButton" onclick="toggleOptions(this)">...</p>
                             <div id="options" style="display: none;">
-                              <!--options -->
+                              
                               <p>Delete</p>
                               
                               
@@ -137,7 +141,7 @@
                             <div class="caption">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
                             <p id="ellipseButton" onclick="toggleOptions(this)">...</p>
                             <div id="options" style="display: none;">
-                              <!--options -->
+                              
                               <p>Delete</p>
                               
                               
@@ -150,7 +154,7 @@
                             </div>
                             <p id="ellipseButton" onclick="toggleOptions(this)">...</p>
                             <div id="options" style="display: none;">
-                              <!--options -->
+                              
                               <p>Delete</p>
                               
                               
@@ -163,98 +167,85 @@
                             </div>
                             <p id="ellipseButton" onclick="toggleOptions(this)">...</p>
                             <div id="options" style="display: none;">
-                              <!--options -->
+                              
                               <p>Delete</p>
                               
                               
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </form>
         </div>
-    </div>
-</body>
+    </div> 
 
 <script>
-    // Get elements by ID or class name
-    var fileInput = document.getElementById('file-input');
-    var label = document.querySelector('label');
-    var labelText = label.querySelector('span');
-    var labelRemove = document.querySelector('i.remove');
-    var labelDefault = labelText.textContent;
-    var selectedImgDiv = document.querySelector('.selected-img');
 
-    selectedImgDiv.style.display = 'none';
+    document.getElementById('file-input').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    const imageType = /^image\//;
+    const imageTitle = document.querySelector('.image-title');
 
-    fileInput.addEventListener('change', function(event) {
-    var file = fileInput.files[0]; // Access the selected file
+    if (!file || !imageType.test(file.type)) {
+        clearImageAndTitle();
+        imageTitle.textContent = 'Please select an image file.';
+        imageTitle.style.display = 'block';
+        imageTitle.style.color = 'red';
+        return;
 
-        if (file && file.type.startsWith('image/')) {
-        
-            labelText.textContent = 'Selected';
-            labelText.style.color = '#00c100';
-            labelRemove.style.display = 'inline'; // Show the remove text
-            selectedImgDiv.style.display = 'flex'; //display img
+    }
 
-            var imageContainer = document.getElementById('image-container');
+    const reader = new FileReader();
+    reader.onload = function(event) {
+        const imgElement = document.createElement('img');
+        imgElement.src = event.target.result;
 
-            var reader = new FileReader(); // Create a FileReader object
-
-            reader.onload = function(event) {
-                var img = document.createElement('img'); // Create an image element
-                img.src = event.target.result; // Set the image source to the loaded result (URL)
-                img.alt = "Selected Image"; // Optional: Set alt attribute for accessibility
-
-                // Clear previous content in the image container and append the new image
-                imageContainer.innerHTML = '';
-                imageContainer.appendChild(img);
-            };
-
-            reader.readAsDataURL(file); // Read the file as a data URL
-
-
-        } 
-        else {
-            labelText.textContent = "Invalid File";
-            labelText.style.color = 'red';
-            labelRemove.style.display = 'inline'; // Hide the remove text
-            fileInput.value = ''; // Clear the file input
-        }
+        const postImgDiv = document.querySelector('.post-img');
+        clearImageAndTitle();
+        postImgDiv.appendChild(imgElement);
+        imageTitle.textContent = file.name; // Display image title
+        document.querySelector('.remove').style.display = 'flex';
+        document.querySelector('.wrapper').style.display = 'none';
+        imageTitle.style.color = '#999';
+    };
+    reader.readAsDataURL(file);
     });
 
-    labelRemove.addEventListener('click', function(event) {
-    labelText.textContent = labelDefault;
-    labelRemove.style.display = 'none'; // Hide the remove text
-    fileInput.value = ''; // Clear the file input
-    selectedImgDiv.style.display = 'none';
+    document.querySelector('.remove').addEventListener('click', function() {
+        clearImageAndTitle();
+        const input = document.getElementById('file-input');
+        input.value = ''; // Clear file input
+        document.querySelector('.wrapper').style.display = 'flex';
     });
 
-
-    
-    function toggleOptions(button) {
-        var optionsDiv = button.nextElementSibling; // Get the associated options div
-        optionsDiv.style.display = (optionsDiv.style.display === 'none') ? 'block' : 'none'; 
+    function clearImageAndTitle() {
+        const postImgDiv = document.querySelector('.post-img');
+        const imageTitle = document.querySelector('.image-title');
+        postImgDiv.innerHTML = ''; // Clear previous image
+        imageTitle.textContent = 'Select an Image'; // Reset image title
+        document.querySelector('.remove').style.display = 'none';
     }
 
-    function showVisibility() {
-        var eye = document.querySelector('.post-visibility');
-        eye.style.display = (eye.style.display === 'none') ? 'flex' : 'none';
-        eye.style.gap = '5px';
-        eye.style.position = 'absolute';
+
+
+    var visibilityTog = document.getElementById('visibility');
+    visibilityTog.addEventListener('click', function(event) {
+        visibilityTog.innerText = (visibilityTog.innerText === 'Public') ? 'Friends' : 'Public'; 
+    });
+
+    var textArea = document.getElementById('text-area');
+    function makeBold() {
+        textArea.style.fontWeight = (textArea.style.fontWeight == 'bold') ? 'normal' : 'bold'; 
     }
 
-    function getValue(clickedElement) {
-        var value_PF = clickedElement.textContent.trim();
-        // console.log("Clicked value:", value_PF);
-       document.getElementById('visibility').innerText = value_PF;  
+    function makeItalic() {
+        textArea.style.fontStyle = (textArea.style.fontStyle == 'italic') ? 'normal' : 'italic'; 
     }
 
-    function clearAll() {
-        document.querySelector('textarea').value = '';
-        document.getElementById('visibility').innerText = ''; 
+    function clearText() {
+        textArea.value = '';
     }
 
 </script>
-
+</body>
 </html>

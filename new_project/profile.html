@@ -119,17 +119,23 @@
                 </div>
                 <div class="out-feed-help-section">
                     <div class="edit-button">
-                        <i class="fa fa-trash-alt"></i>
+                        <button class="update-basic-head" id="delete-acc" onclick="deleteConfirm();"><i class="fa fa-trash-alt"></i> &nbsp;&nbsp;Delete Account &nbsp;</button>                        
+                    </div>
+                    <form action="#" method="post" id="deleteForm">
+                        <div class="delete-confirm">
+                            <button name="delete" class="delete-button" id="dtbt" disabled><i class="fa fa-trash"></i> <span>Delete Anyway</span></button>
+                            <p><i class="fa fa-warning" style="color: #c35300"></i> &nbsp;All the data will be deleted with your account</p>
+                        </div>
+                    </form>
+                </div>
+                <div class="out-feed-help-section">
+                    <div class="edit-button">
+                        <button class="update-basic-head" onclick=""><i class="fa fa-phone"></i> &nbsp;&nbsp;Help & Support &nbsp;</button>
                     </div>
                 </div>
                 <div class="out-feed-help-section">
                     <div class="edit-button">
-                        
-                    </div>
-                </div>
-                <div class="out-feed-help-section">
-                    <div class="edit-button">
-                        
+                        <button class="update-basic-head" onclick=""><i class="fa fa-message"></i> &nbsp;&nbsp;Feedback &nbsp;</button>
                     </div>
                 </div>
             </div>
@@ -191,6 +197,15 @@
             logForm.style.display = (logForm.style.display === 'none') ? 'block' : 'none';
             logBtn.style.display = (logBtn.style.display === 'none') ? 'flex' : 'none';
         }
+        
+        let deleteForm = document.getElementById('deleteForm');
+        let dtBt = document.getElementById('dtbt');
+        deleteForm.style.display = "none";
+        dtBt.disabled = true;
+        function deleteConfirm() {
+            deleteForm.style.display = (deleteForm.style.display === 'none') ? 'flex' : 'none';
+            dtBt.disabled = false;
+        } 
     </script>
 </body>
 </html>

@@ -28,24 +28,15 @@ html,body{
     border-radius:10px;
     width:92%;
     height:98%;
-    /* border: 1px solid indianred; */
-    /* background-color:#E0E5EC; */
-    /* box-shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px    rgba(255,255,255, 0.5); */
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
-    gap: 20px;
+    gap: 2%;
 }
-
-/* .box >*{
-    border: 1px solid orange;
-} */
 
 .footer{
     width: 100%;
     height: 8%;
-    /* border: 1px solid green; */
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -81,12 +72,9 @@ html,body{
 
 .search-head {
     width: 100%;
-    height: 5%;
+    height: 8%;
     padding: 0 10%;
-    /* border: 1px solid green; */
     border-radius: 6px;
-    background: #ffffff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -103,7 +91,7 @@ html,body{
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} 
 
 .search-submit {
     width: 100%;
@@ -118,7 +106,6 @@ html,body{
     outline: none;
     border: none;
     background: #ffffff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -126,21 +113,18 @@ html,body{
 
 .search-btn i {
     font-weight: 200;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .search-inp {
     outline: none;
     border: none;
-    background: #ffffff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     height: 40px;
     padding: 0 20px;
     width: 90%;
 }
 
 .users-list {
-    /* border: 1px solid red; */
     width: 100%;
     display: flex;
     overflow-x: auto;
@@ -163,9 +147,8 @@ html,body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid #005aff; */
     background: #ffffff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
 
 .user-photo {
@@ -179,7 +162,7 @@ html,body{
     margin-top: 5px;
 }
 .follows-you {
-    font-size: 8px;
+    font-size: 7px;
     color: white;
     margin-top: -5px;
     margin-left: auto;
@@ -220,13 +203,12 @@ html,body{
 
 .friend-chat-section {
     width: 60%;
-    /* border: 1px solid red; */
     color: #6e6e6e;
-    padding: 10px;
+    padding: 5px 10px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    height: 45%;
+    gap: 5px;
+    height: 49%;
 }
 
 .friend-chat-section h5{
@@ -234,7 +216,6 @@ html,body{
 }
 
 .friend-list {
-    /* border: 1px solid blue; */
     width: 100%;
     height: 100%;
     overflow-x: hidden;
@@ -244,9 +225,7 @@ html,body{
 .friend-list-container {
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
     padding: 5px 10px;
-    /* border: 1px solid red; */
 }
 
 .friend-photo {
@@ -268,7 +247,6 @@ html,body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* border: 1px solid green; */
     margin-left: 15px;
     width: 70%;
 }
@@ -281,7 +259,6 @@ html,body{
 .friend-username span {
     font-size: 12px;
     color: #494949;
-    /* border: 1px solid cyan; */
     height: 20px;
     white-space: nowrap;
     overflow: hidden;
@@ -303,14 +280,10 @@ html,body{
 @media screen and (max-width: 900px) {
     .friend-chat-section {
         width: 80%;
-        height: 50%;
     }
 }
 
 @media screen and (max-width: 580px) {
-    /* .main-container {
-        background-color:#ffffff;
-    } */
     .box{
         width: 100%;
         height:100%;
@@ -322,8 +295,16 @@ html,body{
     .footer{
         bottom: 0;
     }
+    .search-bar {
+        width: 90%;
+        height: 6%;
+    }
+    .users-list {
+        height: 18%;
+    }
     .friend-chat-section {
         width: 100%;
+        height: 55%;
     }
 }
 
